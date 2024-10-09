@@ -31,18 +31,12 @@ identify the resembling dog breed.
 - Download the [dog
   dataset](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/dogImages.zip).
   Unzip the folder and place it in the repo, at location
-  `path/to/dog_breed_classifier/data/dog_images`
+  `path/to/dog_breed_classifier/data/dog_images`.
 
 - Download the [human
   dataset](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/lfw.zip).
   Unzip the folder and place it in the repo, at location
   `path/to/dog_breed_classifier/data/lfw`.
-
-- Create `data` folder and copy the `dog_images` and `lfw` datasets here.
-
-    ```shell
-    (dog_breed)$: mkdir data
-    ```
 
 ## Project Structure
 
@@ -56,3 +50,12 @@ identify the resembling dog breed.
 └── src
     └── dog_app.ipynb
 ```
+
+## References
+
+- [Data Scientist Nanodegree
+  Program](https://www.udacity.com/course/data-scientist-nanodegree--nd025)
+
+---
+
+made with 💙 by [mafda](https://mafda.github.io/)
