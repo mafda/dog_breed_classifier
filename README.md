@@ -38,11 +38,17 @@ identify the resembling dog breed.
   Unzip the folder and place it in the repo, at location
   `path/to/dog_breed_classifier/data/lfw`.
 
+- Donwload the [VGG-16 bottleneck
+  features](https://s3-us-west-1.amazonaws.com/udacity-aind/dog-project/DogVGG16Data.npz)
+  for the dog dataset.  Place it in the repo, at location
+  `path/to/dog_breed_classifier/data/bottleneck_features`.
+
 ## Project Structure
 
 ```shell
 ├── README.md
 ├── data
+│   ├── bottleneck_features
 │   ├── dog_images
 │   ├── haarcascades
 │   └── lfw
