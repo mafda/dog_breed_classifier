@@ -4,7 +4,7 @@ In this project, given an image of a dog, the algorithm will identify an
 estimate of the canine’s breed.  If supplied an image of a human, the code will
 identify the resembling dog breed.
 
-The image below displays potential sample output of your finished project:
+The image below displays potential sample output of the finished project:
 
 ![Sample Dog Output](images/sample_dog_output.png)
 
@@ -101,6 +101,7 @@ Test accuracy: 1.0817%
 5. **Transfer learning with Xception**: It is a reliable, efficient and widely used architecture for transfer learning in image classification tasks due to its ability to learn deep features without overfitting.
 
 ![Xception](images/output_xception.png)
+![Xception](images/output_xception2.png)
 
 6. **Best model**
 
@@ -115,7 +116,16 @@ Test accuracy: 1.0817%
 ![output_xception_human](images/output_xception_human.png)
 ![output_neither](images/output_neither.png)
 
+## App
+
 ## Conclusions
+
+In this project, we tested three different models: a basic CNN, and transfer
+learning with VGG16 and **Xception**. The results showed improvements in accuracy,
+as seen in the summary results table. Xception provided the best performance,
+improving upon VGG16, which already delivered strong results. Ultimately, we
+selected Xception as our top-performing model, and it performed well even on
+challenging images, such as a pencil sketch of a dog.
 
 ## References
 
