@@ -53,11 +53,23 @@ The image below displays potential sample output of the finished project:
   for the dog dataset.  Place it in the repo, at location
   `path/to/dog_breed_classifier/data/bottleneck_features`.
 
+- Run it:
+
+    ```
+    (dog_breed)$: streamlit run app/app.py
+    ```
+
+As soon as you run the script, a local Streamlit server will spin up, and your
+app will open in a new tab in your default web browser.
+
+Or you can navigate to (http://localhost:8501)[http://localhost:8501].
+
 ## Project Structure
 
 ```shell
 ├── README.md
 ├── app
+│   └── app.py
 ├── data
 │   ├── bottleneck_features
 │   ├── dog_images
@@ -73,14 +85,19 @@ The image below displays potential sample output of the finished project:
 
 ## Results
 
-1. **Detect Humans with OpenCV**: We use OpenCV's implementation of [Haar feature-based cascade classifiers](http://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html) to detect human faces in images.
+1. **Detect Humans with OpenCV**: We use OpenCV's implementation of [Haar
+   feature-based cascade
+   classifiers](http://docs.opencv.org/trunk/d7/d8b/tutorial_py_face_detection.html)
+   to detect human faces in images.
 
 ```
 -> 100% images of the first 100 human_files_short files were detected as human face.
 -> 12% images of the first 100 dog_files_short files were detected as human face.
 ```
 
-2. **Detect Dogs with ResNet-50**: We use a pre-trained [ResNet-50](http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006) model to detect dogs in images.
+2. **Detect Dogs with ResNet-50**: We use a pre-trained
+   [ResNet-50](http://ethereon.github.io/netscope/#/gist/db945b393d40bfa26006)
+   model to detect dogs in images.
 
 ```
 -> 0% images of the first 100 human_files_short files were detected as dog.
@@ -93,12 +110,16 @@ The image below displays potential sample output of the finished project:
 Test accuracy: 1.0817%
 ```
 
-4. **Transfer learning with VGG16**: The model uses the the pre-trained VGG-16 model as a fixed feature extractor, where the last convolutional output of VGG-16 is fed as input to our model.
+4. **Transfer learning with VGG16**: The model uses the the pre-trained VGG-16
+   model as a fixed feature extractor, where the last convolutional output of
+   VGG-16 is fed as input to our model.
 
 ![vgg16](images/output_vgg16.png)
 
 
-5. **Transfer learning with Xception**: It is a reliable, efficient and widely used architecture for transfer learning in image classification tasks due to its ability to learn deep features without overfitting.
+5. **Transfer learning with Xception**: It is a reliable, efficient and widely
+   used architecture for transfer learning in image classification tasks due to
+   its ability to learn deep features without overfitting.
 
 ![Xception](images/output_xception.png)
 ![Xception](images/output_xception2.png)
@@ -118,14 +139,19 @@ Test accuracy: 1.0817%
 
 ## App
 
+The web application allows you to select and load an image (dog, human, or
+others), to later predict the Dog Breed.
+
+![dog_breed_classifier](images/dog_breed_classifier.gif)
+
 ## Conclusions
 
 In this project, we tested three different models: a basic CNN, and transfer
-learning with VGG16 and **Xception**. The results showed improvements in accuracy,
-as seen in the summary results table. Xception provided the best performance,
-improving upon VGG16, which already delivered strong results. Ultimately, we
-selected Xception as our top-performing model, and it performed well even on
-challenging images, such as a pencil sketch of a dog.
+learning with VGG16 and **Xception**. The results showed improvements in
+accuracy, as seen in the summary results table. Xception provided the best
+performance, improving upon VGG16, which already delivered strong results.
+Ultimately, we selected Xception as our top-performing model, and it performed
+well even on challenging images, such as a pencil sketch of a dog.
 
 ## References
 
